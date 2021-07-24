@@ -97,8 +97,11 @@ while machine_on :
     coffee = input("What would you like? (espresso/latte/cappuccino)")
 
     change = 0
-
-    if coffee == "report" :
+    
+    if coffee == "off" :
+        print("BYE!")
+        machine_on = False
+    elif coffee == "report" :
         report()
     elif coffee == "espresso" :
         money_entered = money()
@@ -114,6 +117,3 @@ while machine_on :
 
 if resources["water"] == 0 or resources["coffee"] == 0 or resources["milk"] == 0 :
     machine_on = False
-else :
-    machine_on = False
-
